@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title id="pageTitle">PoFV Chess by AMin</title>
+  <script>
+    window.onload = function() {
+      var pageTitle = document.getElementById('pageTitle');
+
+      setInterval(function() {
+        pageTitle.textContent = pageTitle.textContent === 'PoFV Chess v4.0' ? 'UPDATED 27/12/2023' : 'PoFV Chess v4.0';
+      }, 3000);
+    };
+  </script>
+  <link rel="stylesheet" href="style.css"> <!-- Liên kết đến tệp CSS bên ngoài -->
+  <!-- Thêm icon trang web -->
+  <link rel="icon" href="images/finncolor.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/finncolor.ico" type="image/x-icon">
+</head>
+<body>
+<!-- ... Mã HTML khác ... -->
+<div id="countdown" style="color:greenyellow; font-weight: bold; text-align: center;"></div>
+<div id="countdown2" style="color: rgb(255, 0, 0) ; font-weight: bold; text-align: center;"></div>
+<script>
+  // Tính thời gian còn lại đến mốc thời gian bạn đặt
+  var targetDate = new Date("2023-12-24T18:59:59").getTime();
+  var targetDate2 = new Date("2024-02-09T23:59:59").getTime();
+  var endDate = new Date("2023-12-25T23:59:59").getTime();
+  var endDate2 = new Date("2024-02-12T23:59:59").getTime();
+
+  // Cập nhật thời gian còn lại và hiển thị nó
+  var countdown = document.getElementById("countdown");
+  var countdown2 = document.getElementById("countdown2");
+  var congratulations = document.getElementById("congratulations");
+  var congratulations2 = document.getElementById("congratulations2"); // Thêm id cho phần chúc mừng
+   var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = targetDate - now;
+    var distance2 = targetDate2 - now;
+    var distan1 = endDate - now;
+    var distan2 = endDate2 - now;
+    if (distance < 0) {
+      clearInterval(x);
+      countdown.innerHTML = "M E R R Y   C H R I S T M A S";
+      var colorChangeInterval = setInterval(function() {
+        congratulations.style.color = getRandomColor(); // Gọi hàm để thay đổi màu
+      }, 1000); var colorChangeInterval = setInterval(function() {
+        countdown.style.color = getRandomColor(); // Gọi hàm để thay đổi màu
+      }, 1000);; // Hàm này để thay đổi màu liên tục
+    } else { 
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = "Còn " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây là đến Noel";
+    }
+    if (distan1 < 0) {
+    countdown.style.display = "none";
+    congratulations.style.display = "none";
+    }
+  }, 1000); 
+  var y = setInterval(function() {
+  var now = new Date().getTime();
+  var distance2 = targetDate2 - now;
+  var distan2 = endDate2 - now;
+  if (distance2 < 0) {
+      clearInterval(y);
+      countdown2.innerHTML = "CHÚC MỪNG NĂM MỚI 2024 !!!";
+      var colorChangeInterval2 = setInterval(function() {
+        congratulations2.style.color = getRandomColor(); // Gọi hàm để thay đổi màu
+      }, 1000); var colorChangeInterval2 = setInterval(function() {
+        countdown2.style.color = getRandomColor(); // Gọi hàm để thay đổi màu
+      }, 1000);; // Hàm này để thay đổi màu liên tục
+    } else { 
+      var day = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+      var hour = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minute = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+      var second = Math.floor((distance2 % (1000 * 60)) / 1000);
+
+      countdown2.innerHTML = "Còn " + day + " ngày " + hour + " giờ " + minute + " phút " + second + " giây là đến Tết Nguyên Đán 2024";
+    }
+    if (distan2 < 0) {
+      countdown2.style.display = "none";
+      congratulations2.style.display = "none";
+  };
+  
+  }, 1000);
+
+
+  // Hàm này để tạo màu ngẫu nhiên
+  function getRandomColor() {
+    var letters = "0123456789ABCDEF";
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+</script>
+</body>
+</html>
+<div class="image-container">
+  <div class="image-border"></div>
+  <img id="META" src="images/meta.jpg" style="display: none;" alt="Hình ảnh đầu trang" width="962" height="600">
+</div>
+<!-- Phần tử Đăng nhập -->
+<div id="ccc">
+  <div id="loginContainer">
+    <label for="username">Tên đăng nhập:</label>
+    <input type="text" id="username" name="username"><br><br>
+    <label for="password">Mật khẩu:</label>
+    <input type="password" id="password" name="password"><br><br>
+    <button id="good" onclick="login()">Đăng nhập</button>
+</div></div>
+
+<!-- Phần tử sau khi đăng nhập -->
+<div id="contentContainer" style="display: none;">
+</div>
+
+<!-- Script JavaScript -->
+<script src="script2.js"></script>  
+<!-- <script>
+    // Nếu điều kiện đúng, thay đổi hình ảnh
+    var tDate = new Date("2023-09-25T23:59:59").getTime();
+    var nownow = new Date().getTime();
+    var tdis = tDate - nownow;
+    if (tdis < 0) {
+      document.getElementById("META").src ="images/meta2.jpg";
+      document.getElementById("META").height ="550";
+    }
+</script> -->
+<div class="audio-controls">
+  <button id="audioControlButton" style="display: none;" onclick="toggleAudio()">Tắt tiếng</button>
+  <button id="audioControlButton2" style="display: none;" onclick="toggleAudio2()">Tắt tiếng (nền đầu)</button>
+</div>
+<div> <button id="logout" style="display: none;" onclick="logout()">Đăng xuất</button> </div>
+  <div class="fullscreen-button" id="fullscreenButton">&#x26F6;</div>
+  <div id="cardContainer" style="display: none;"></div>
+  <div class="image-container">
+    <div id="selectedCountDisplay" style="display: none;">Vui lòng chọn 30 lá bài</div>
+    <button id="startButton" style="display: none;" onclick="startGame()">Bắt đầu</button>
+  </div>
+  <div id="gameContainer" style="display: none;" >
+    <div id="hiddenCards"></div>
+    <div id="selectedCards"></div>
+    <button id="addCardButton" onclick="addCard()">Thêm lá bài</button>
+  </div>
+  <div id="removedCards"></div>
+  <script src="script.js"></script>
+</body>
+</html>

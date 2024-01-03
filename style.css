@@ -1,0 +1,318 @@
+#ccc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loginContainer {
+  display: inline-block;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Để căn giữa theo chiều ngang */
+  max-width: 700px; /* Để giới hạn chiều rộng tối đa của phần tử */
+}
+
+#loginContainer h2,
+#loginContainer label,
+#loginContainer input,
+#loginContainer button {
+  margin: 5px;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+   /* Điều này có thể được điều chỉnh để thay đổi khoảng cách giữa các phần tử */
+}
+label, input {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#good {
+  width: 105%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+#good {
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+#good:hover {
+  background-color: #0056b3;
+}
+
+
+label { font-weight: bold; text-align: center; color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.425); /* Nền mờ để nút điều khiển dễ đọc */
+  padding: 10px;
+  border-radius: 5px;}
+.image-container {
+      display: flex;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  button2 {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+  
+  button2 {
+      background-color: #007BFF;
+      color: #fff;
+      cursor: pointer;
+  }
+  
+  button2:hover {
+      background-color: #0056b3;
+  }
+
+    #fullscreenButton {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .image-container img {
+      margin: auto;
+    }
+
+    body {
+      background-image: url(images/background2.jpg);
+      background-size: center;
+      position: relative;
+    }
+
+    #selectedCountDisplay {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      background-color: rgba(255, 255, 255, 0.774);
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }  
+    .star {
+      font-size: 50px;
+      color: gold;
+    }
+
+    #startButton {
+      position: fixed;
+      display: flex ;
+      background-color: #1eff00bb;
+      width: 500px;
+      bottom: 10px; /* Điều chỉnh right để đặt vị trí bên phải của trang */
+      z-index: 1000; /* Điều này đảm bảo nút điều khiển hiển thị trên mọi nội dung khác */
+      border-radius: 5px;
+      font-size: 24px;
+      padding: 10px 20px;
+    }
+
+    .image-container {
+  position: relative;
+  display: inline-block;
+  text-align: center; /* Căn giữa theo chiều ngang */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+    #addCardButton {
+      font-size: 24px;
+      display: flex;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 55px;
+    }
+
+    .hidden-cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(images/card_back.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .card {
+      width: 250px;
+      height: 365px;
+      margin: 25px;
+      border-radius: 5px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      perspective: 1000px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .card-container {
+      width: 250px;
+      height: 365px;
+      margin: 25px;
+      perspective: 1000px;
+      display: inline-block;
+      position: relative;
+      justify-content: center;
+    }
+
+    .card-note {
+  text-align: center; /* Căn giữa nội dung */
+  font-weight: bold; /* Làm in đậm */
+  color: white; /* Màu chữ trắng */
+  background-color: rgba(0, 0, 0, 0.6); /* Màu nền */
+  padding: 5px 10px; /* Khoảng cách giữa nội dung và viền */
+  border-radius: 5px; /* Bo tròn viền */
+  position: absolute ; /* Để nằm ở trên sau mép lá bài */
+  bottom: -23px; /* Khoảng cách dưới cùng */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%); /* Dịch chuyển lên trên 50% chiều ngang để căn giữa hoàn toàn */
+}
+
+.card-number {
+  text-align: center; /* Căn giữa nội dung */
+  font-weight: bold; /* Làm in đậm */
+  color: whitesmoke; /* Màu chữ trắng */
+  background-color: rgb(255, 0, 212); /* Màu nền */
+  padding: 5px 10px; /* Khoảng cách giữa nội dung và viền */
+  border-radius: 5px; /* Bo tròn viền */
+  position: absolute ; /* Để nằm ở trên sau mép lá bài */
+  top: 10px; /* Khoảng cách dưới cùng */
+  right: 0px; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%); /* Dịch chuyển lên trên 50% chiều ngang để căn giữa hoàn toàn */
+}
+
+.audio-controls {
+  position: fixed;
+  display: flex ;
+  top: 10px; /* Điều chỉnh top để đặt vị trí trên cùng của trang */
+  left: 10px; /* Điều chỉnh right để đặt vị trí bên phải của trang */
+  z-index: 1000; /* Điều này đảm bảo nút điều khiển hiển thị trên mọi nội dung khác */
+  background-color: rgba(255, 255, 255, 0.486); /* Nền mờ để nút điều khiển dễ đọc */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#logout {
+  position: fixed;
+  display: flex ;
+  bottom: 10px; /* Điều chỉnh top để đặt vị trí trên cùng của trang */
+  right: 10px; /* Điều chỉnh right để đặt vị trí bên phải của trang */
+  z-index: 1000; /* Điều này đảm bảo nút điều khiển hiển thị trên mọi nội dung khác */
+  background-color: rgb(255, 0, 0); /* Nền mờ để nút điều khiển dễ đọc */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Thêm các quy tắc CSS tùy chỉnh khác tại đây nếu cần */
+
+    #removedCards {
+      position: fixed;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    #removedCards div {
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+
+    #removedCards .removed-card-item {
+      width: 100px;
+      height: 150px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      #audioControlButton {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}}
+
+  /* Định dạng thời gian còn lại */
+  #countdown {
+    color: white;
+    font-weight: bold;
+    text-align: center; /* Căn giữa ngang */
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+  }
+
+  /* Định dạng phần chúc mừng */
+  #congratulations {
+    display: none;
+    color: white;
+    font-weight: bold;
+    text-align: center; /* Căn giữa ngang */
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+  }
+  #countdown2 {
+    color: white;
+    font-weight: bold;
+    text-align: center; /* Căn giữa ngang */
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+  }
+
+  /* Định dạng phần chúc mừng */
+  #congratulations2 {
+    display: none;
+    color: white;
+    font-weight: bold;
+    text-align: center; /* Căn giữa ngang */
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+  }
