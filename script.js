@@ -325,7 +325,7 @@ function selectCard(card, cardIndex) {
       selectedCards.push(cardIndex);
       selectedCount++;
       updateSelectedCount()
-      card.style.border = "5px solid green";
+      card.style.border = "5px solid yellow";
     } else {
       selectedCards = selectedCards.filter(item => item !== cardIndex);
       selectedCount--;
@@ -348,7 +348,7 @@ function selectCard2(card, cardIndex) {
       selectedCards.push(cardIndex);
       selectedCount++;
       updateSelectedCount();
-      card.style.border = "5px solid green";
+      card.style.border = "5px solid yellow";
     } else {
       // Nếu card đã được chọn, thực hiện thêm card thứ 2
       if (!selectedCards.includes(cardIndex + '_2')) {
