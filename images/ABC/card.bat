@@ -2,10 +2,10 @@
 setlocal enabledelayedexpansion
 set "prefix=card"
 set "extension=.jpg"
-set "counter=57"
+set "counter=75"
 
 for %%f in (*.jpg) do (
-    ren "!filePath!!fileName!.jpg" "!fileName!_2.jpg"
+    ren "%%f" "!prefix!!counter!!extension!"
     set /a "counter+=1"
 )
 

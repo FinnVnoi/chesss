@@ -304,6 +304,7 @@ function removeNoteFromCards(cardList) {
   addNoteToCards([54, 50, 46], "BUFF");
   addNoteToCards([36], "NERF");
   addNoteToCards([22], "ADJUST");
+  addNoteToCards([75,76,77,78,79,80,81], "REWRITE");
   } else {audio1.play()}
   if (rremaining < 0) {
     // Sử dụng hàm để xóa ghi chú từ các lá bài trong mảng newcard
