@@ -2,7 +2,7 @@ const audio1 = new Audio();
   audio1.loop = true; 
   // Không phát lại liên tục 
   audio1.src = 'music.mp3';
-const twocards = [1, 3, 6, 8, 9, 12, 14, 25, 28, 29, 31, 34, 35, 37, 38, 40, 46, 48, 50, 53, 57];
+const twocards = [1, 3, 6, 8, 9, 12, 14, 25, 28, 29, 31, 33, 34, 35, 37, 38, 40, 46, 48, 53, 57];
 const ttcard = 30;
 // Mảng chứa các lá bài đã chọn
 let selectedCards = [];
@@ -301,9 +301,9 @@ function removeNoteFromCards(cardList) {
     //addCustomCard();
     audio1.src = 'music.mp3'
     audio1.play();
-  addNoteToCards([8,9,11,12,29,33,34,35,40,41,48,49,50,53,72], "Điều chỉnh");
-  addNoteToCards([23], "Thay thế Khiên");
-  addNoteToCards([5, 26, 36], "Adjust");
+  addNoteToCards([54, 50, 46], "BUFF");
+  addNoteToCards([36], "NERF");
+  addNoteToCards([22], "ADJUST");
   } else {audio1.play()}
   if (rremaining < 0) {
     // Sử dụng hàm để xóa ghi chú từ các lá bài trong mảng newcard
