@@ -2,7 +2,7 @@ const audio1 = new Audio();
   audio1.loop = true; 
   // Không phát lại liên tục 
   audio1.src = 'music.mp3';
-const twocards = [1, 3, 6, 8, 9, 12, 14, 25, 28, 29, 31, 33, 34, 35, 37, 38, 40, 46, 48, 53, 57];
+const twocards = [1, 3, 6, 8, 9, 12, 14, 25, 28, 29, 31, 33, 34, 35, 37, 38, 40, 46, 48, 53, 71, 76];
 const ttcard = 30;
 // Mảng chứa các lá bài đã chọn
 let selectedCards = [];
@@ -40,7 +40,7 @@ function deleteAllCookies() {
 // Tạo các lá bài trên trang chủ
 document.getElementById("startButton").style.display = "none";
 const cardContainer = document.getElementById("cardContainer");
-for (let i = 1; i <= 81; i++) {
+for (let i = 1; i <= 84; i++) {
   const card = document.createElement("div");
   card.className = "card";
   card.style.backgroundImage = `url(images/card${i}.jpg)`;
@@ -301,10 +301,11 @@ function removeNoteFromCards(cardList) {
     //addCustomCard();
     audio1.src = 'music.mp3'
     audio1.play();
-  addNoteToCards([38], "BUFF: Lượt bạn -> Bất kì");
-  addNoteToCards([22,59,43], "ADJUST");
-  addNoteToCards([1], "NERF: Hủy -> Vô hiệu");
-  addNoteToCards([58], "NERF: All slưu -> 2 quân");
+  addNoteToCards([38,51,54,74], "BUFF");
+  addNoteToCards([3,18,22,23,73,43], "ADJUST");
+  addNoteToCards([1,72], "NERF");
+  addNoteToCards([55,76,77], "NEW");
+
   } else {audio1.play()}
   if (rremaining < 0) {
     // Sử dụng hàm để xóa ghi chú từ các lá bài trong mảng newcard
