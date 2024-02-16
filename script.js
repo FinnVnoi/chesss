@@ -2,7 +2,7 @@ const audio1 = new Audio();
   audio1.loop = true; 
   // Không phát lại liên tục 
   audio1.src = 'music.mp3';
-const twocards = [1, 3, 6, 8, 9, 12, 14, 25, 28, 29, 31, 33, 34, 35, 37, 38, 40, 46, 48, 53, 71, 76];
+const twocards = [1, 3, 8, 9, 12, 14, 25, 28, 29, 31, 32, 33, 34, 35, 37, 38, 40, 46, 48, 71, 76];
 const ttcard = 30;
 // Mảng chứa các lá bài đã chọn
 let selectedCards = [];
@@ -301,9 +301,9 @@ function removeNoteFromCards(cardList) {
     //addCustomCard();
     audio1.src = 'music.mp3'
     audio1.play();
-  addNoteToCards([38,51,54,74], "BUFF");
-  addNoteToCards([3,18,22,23,73,43], "ADJUST");
-  addNoteToCards([1,72], "NERF");
+  addNoteToCards([2,38,51,54,74,75], "BUFF");
+  addNoteToCards([3,18,22,23,60,67,73,43], "ADJUST");
+  addNoteToCards([1,17,26,72], "NERF");
   addNoteToCards([55,76,77], "NEW");
 
   } else {audio1.play()}
